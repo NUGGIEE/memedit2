@@ -98,7 +98,11 @@
     lbl.backgroundColor = [UIColor clearColor];
     lbl.textAlignment = NSTextAlignmentLeft;
     lbl.textColor = [UIColor whiteColor];
-    lbl.font = [UIFont monospacedSystemFontOfSize:14 weight:UIFontWeightMedium];
+    if (@available(iOS 13.0, *)) {
+        lbl.font = [UIFont monospacedSystemFontOfSize:14 weight:UIFontWeightMedium];
+    } else {
+        lbl.font = [UIFont systemFontOfSize:14];
+    }
     [self.contentView addSubview:lbl];
 
     [NSLayoutConstraint activateConstraints:@[
@@ -173,7 +177,11 @@
     tf.translatesAutoresizingMaskIntoConstraints = NO;
     tf.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.2];
     tf.textColor = [UIColor whiteColor];
-    tf.font = [UIFont monospacedSystemFontOfSize:14 weight:UIFontWeightRegular];
+    if (@available(iOS 13.0, *)) {
+        tf.font = [UIFont monospacedSystemFontOfSize:14 weight:UIFontWeightRegular];
+    } else {
+        tf.font = [UIFont systemFontOfSize:14];
+    }
     tf.layer.cornerRadius = 6;
     tf.layer.borderWidth = 1;
     tf.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:0.1].CGColor;
@@ -197,8 +205,15 @@
 - (void)initCheckbox {
     UIButton *cb = [UIButton buttonWithType:UIButtonTypeCustom];
     cb.translatesAutoresizingMaskIntoConstraints = NO;
-    [cb setImage:[UIImage systemImageNamed:@"circle"] forState:UIControlStateNormal];
-    [cb setImage:[UIImage systemImageNamed:@"checkmark.circle.fill"] forState:UIControlStateSelected];
+    if (@available(iOS 13.0, *)) {
+        [cb setImage:[UIImage systemImageNamed:@"circle"] forState:UIControlStateNormal];
+        [cb setImage:[UIImage systemImageNamed:@"checkmark.circle.fill"] forState:UIControlStateSelected];
+    } else {
+        [cb setTitle:@"☐" forState:UIControlStateNormal];
+        [cb setTitle:@"☑︎" forState:UIControlStateSelected];
+        [cb setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [cb setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    }
     [cb addTarget:self action:@selector(onCheckboxTapped:) forControlEvents:UIControlEventTouchUpInside];
     cb.hidden = YES;
     [self.contentView addSubview:cb];

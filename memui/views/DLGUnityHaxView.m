@@ -358,7 +358,11 @@ typedef enum {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
         cell.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.5];
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.font = [UIFont monospacedSystemFontOfSize:13 weight:UIFontWeightRegular];
+        if (@available(iOS 13.0, *)) {
+            cell.textLabel.font = [UIFont monospacedSystemFontOfSize:13 weight:UIFontWeightRegular];
+        } else {
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+        }
         cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:11];
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
